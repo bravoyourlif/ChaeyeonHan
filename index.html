@@ -9,6 +9,7 @@
     <meta name="keywords" content="apollo, jade, template, html, sass, jquery">
     <meta name="author" content="Bucky Maler">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
     <section id="hero">
@@ -53,13 +54,12 @@
       <div class="wrapper">
         <div class="blurb">
           <h2><strong>Research Projects</strong></h2>
-          <p>
             <b>2022-2023</b>
             <ul>
-                <li>Exploring the <button id="myButton">Geography of Social Ties</button> in the U.S. based onThanksgiving Destination (on-going)</li>
+                <li>Exploring the <button id="myButton">Geography of Social Ties <i class="material-icons" style="vertical-align: middle;">add_circle</i></button> in the U.S. based onThanksgiving Destination (on-going) </li>
                 <li><a href="https://urbanaudiosensing.github.io/">Urban Sensing of Pedestrians</a> through Integrated, Cost-effective, and Scalable Audio Sensor Networks (on-going)</li>
-                <li>Mental Health Facility Visits Before and After the Outbreak of Covid-19: <button id="mentalhealth_button">The Role of Neighborhood Built Environment</button> (on-going)</li>
-                <li><a href="">Application Trend of Artificial Intelligence in Urban Planning Research (on-going)</a></li>
+                <li>Mental Health Facility Visits Before and After the Outbreak of Covid-19: <button id="mentalhealth_button">The Role of Neighborhood Built Environment <i class="material-icons" style="vertical-align: middle;">add_circle</i></button> (on-going)</li>
+                <li>A Bibliometric Literature Review on <button id="ml_button">Artificial Intelligence in Urban Studies <i class="material-icons" style="vertical-align: middle;">add_circle</i></button> (on-going)</li>
             </ul>
             <b>2021-2022</b>
             <ul>
@@ -72,7 +72,6 @@
                 <li>Analysis of the Subway Ridership Change in Seoul after the Outbreak of COVID-19</li>
                 <li>A Comparative Analysis of Trends of Disaster Risk Research using Topic Modeling & Network Analysis</li>
             </ul>
-          </p>
 
           <div id="thanksgiving" class="popup">
               <div class="popup-content">
@@ -90,6 +89,15 @@
                   This project aims to..
                   </p>
                   <button id="mentalhealth_closePopup">Close</button>
+              </div>
+          </div>
+
+          <div id="ml" class="popup">
+              <div class="popup-content">
+                  <p><b>A Bibliometric Literature Review on Artificial Intelligence, Machine Learning, and Deep Learning in Urban Studies</b><br>
+                  This project aims to..
+                  </p>
+                  <button id="ml_closePopup">Close</button>
               </div>
           </div>
 
@@ -115,6 +123,18 @@
               window.addEventListener("click", function (event) {
                   if (event.target == thanksgiving) {
                       mentalhealth.classList.remove("show");
+                  }
+              });
+
+              ml_button.addEventListener("click", function () {
+                  ml.classList.add("show");
+              });
+              ml_closePopup.addEventListener("click", function () {
+                  ml.classList.remove("show");
+              });
+              window.addEventListener("click", function (event) {
+                  if (event.target == thanksgiving) {
+                      ml.classList.remove("show");
                   }
               });
           </script>

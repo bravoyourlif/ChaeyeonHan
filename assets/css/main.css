@@ -592,6 +592,10 @@ svg path{
     font-weight:100
 }
 
+#about .wrapper .blurb li{
+  margin: 6px 0;
+}
+
 #about .wrapper .blurb a{
     color: black;
     font-family: Helvetica
