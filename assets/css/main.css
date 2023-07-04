@@ -151,6 +151,10 @@ table{
 td,th{
     padding:0
 }
+
+li {
+  margin: 6px 0px;
+}
 @font-face{
     font-family:'icomoon';
     src:url("fonts/icomoon.eot?3hi6ws");
